@@ -26,7 +26,6 @@ platformdirs==4.3.6
 poetry==1.8.4
 poetry-core==1.9.1
 poetry-plugin-export==1.8.0
--e git+https://github.com/M1ster-J/Portfolio2.git@40aab9e42586d9bed739d6b4e6bccc91ddba44f5#egg=portfolio
 ptyprocess==0.7.0
 pyproject_hooks==1.2.0
 pywin32-ctypes==0.2.3

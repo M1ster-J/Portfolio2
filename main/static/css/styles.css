@@ -1,0 +1,393 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111827;
+    color: #d1d5db;
+    line-height: 1.6;
+    padding-top: 80px; /* Added padding to prevent navbar overlap */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 24, 39, 0.95);
+    padding: 15px 0;
+    z-index: 1000; /* Ensuring it's on top */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+header nav a {
+    margin: 0 15px;
+  color: #bfc2c6;
+  transition: color 0.3s ease;
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  font-size: .9rem;
+
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section */
+#home {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1500x800') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    z-index: 0; /* Ensure it's below the navbar */
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#home h1 {
+    font-size: 2rem;
+    font-weight: 690;
+    margin-bottom: 33px;
+  
+}
+
+#home p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#home a {
+    background: #2563eb;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+#home a:hover {
+    background: #1d4ed8;
+}
+
+/* About Section */
+#about {
+    padding: 80px 20px;
+    text-align: center;
+    background: #1f2937;
+    position: relative; /* Ensuring it doesn't overlap the navbar */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #9ca3af;
+}
+
+/* Projects Section */
+#projects {
+    padding: 80px 20px;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #d1d5db;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 20px;
+    background: #1f2937;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+#contact a{
+    background: #2563eb;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+#contact a:hover {
+    background: #1d4ed8;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #111827;
+    color: #9ca3af;
+}
+
+footer a {
+    color: #9ca3af;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section for Tailwind */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #1e1e2f, #131324);
+    position: relative;
+    z-index: 0;
+}
+
+.hero-content {
+    max-width: 50%;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    text-decoration: none;
+    background: #0078ff;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #005bb5;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid #0078ff;
+    color: #0078ff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #0078ff;
+    color: #fff;
+}
+
+/* Hero Image */
+.hero-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Background Elements */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 114, 255, 0.2), transparent);
+    z-index: 1;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.avatar { 
+    max-width: 140px!important;
+    margin-top: 30px;
+}
+
+#social a {
+    background: none!important;
+}
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hidden {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  
+  .scrollable-container {
+    max-width: 100%;
+    overflow-x: auto; /* Horizontal scrolling */
+    padding: 10px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.scrollable-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for a cleaner look */
+}
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pop-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.pop-in.visible {
+    animation: pop-in 0.6s forwards;
+}
+
+/* Default scrollbar hidden */
+.scrollable-container {
+    overflow-x: auto;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scrollable-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+/* Show scrollbar when scrolling */
+.scrollable-container.scrollbar-visible::-webkit-scrollbar {
+    display: block;
+    height: 8px; /* Customize scrollbar height */
+}
+
+.scrollable-container.scrollbar-visible::-webkit-scrollbar-thumb {
+    background-color: #555; /* Scrollbar color */
+    border-radius: 4px;
+}
+
+.scrollable-container.scrollbar-visible::-webkit-scrollbar-track {
+    background: #333; /* Track color */
+}
+.hidden {
+    display: none;
+}
